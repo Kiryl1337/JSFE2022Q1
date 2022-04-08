@@ -60,7 +60,6 @@ nav li:last-child {
     border-bottom: 3px solid #f1cdb3;
 }
 
-
 .logo h1 {
     font-family: 'Georgia';
     font-style: normal;
@@ -80,4 +79,65 @@ nav li:last-child {
     line-height: 15px;
     letter-spacing: 0.1em;
     color: #cdcdcd;
+}
+
+/*========== START SCREEN CONTENT ==========*/
+
+section.start-screen-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    align-content: center;
+    padding: 0 40px;
+}
+
+section.start-screen-content .block-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 460px;
+    padding-top: 163px;
+}
+
+section.start-screen-content .block-info h1 {
+    max-width: 310px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+    color: #ffffff;
+}
+
+section.start-screen-content .block-info p {
+    margin: 42px 0 42px 0;
+    font-family: 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 160%;
+    color: #cdcdcd;
+}
+
+.btn-primary {
+    padding: 15px 45px;
+    width: 208px;
+    height: 50px;
+    font-family: 'Georgia';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    line-height: 130%;
+    background: #F1CDB3;
+    border-radius: 100px;
+    color: #292929;
+    transition: 0.5s;
+}
+
+.btn-primary:hover {
+    background-color: #fddcc4;
 }
