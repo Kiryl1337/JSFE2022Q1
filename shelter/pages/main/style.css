@@ -102,7 +102,7 @@ section.start-screen-content .block-info {
     padding-top: 163px;
 }
 
-section.start-screen-content .block-info h1 {
+section.start-screen-content .block-info h2 {
     max-width: 310px;
     font-family: 'Georgia';
     font-style: normal;
@@ -140,4 +140,47 @@ section.start-screen-content .block-info p {
 
 .btn-primary:hover {
     background-color: #fddcc4;
+}
+
+/*========== ABOUT CONTENT ==========*/
+
+
+section.about .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding: 80px 40px 100px 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+section.about .container .block-info {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 25px;
+    max-width: 430px;
+}
+
+section.about .container .block-info h3 {
+    max-width: 370px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+section.about .container .block-info p {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4c4c4c;;
 }
