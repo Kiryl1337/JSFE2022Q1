@@ -184,3 +184,139 @@ section.about .container .block-info p {
     line-height: 160%;
     color: #4c4c4c;;
 }
+
+/*========== PETS CONTENT ==========*/
+
+section.pets {
+    background: #f6f6f6;
+}
+
+section.pets .container{
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    align-content: center;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 60px;
+}
+
+section.pets .container h3 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    color: #545454;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.06em;
+  }
+  section.pets .container .pets-slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  section.pets .container .pets-slider .pets-slider-items {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 90px;
+  }
+  
+  section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
+    display: flex;
+    background: #fafafa;
+    border-radius: 9px;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
+    margin-top: 30px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-align: center;
+  }
+
+  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
+    width: 187px;
+    height: 52px;
+    border-radius: 100px;
+    border: 2px solid #f1cdb3;
+    margin: 30px auto 30px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 52px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    text-align: center;
+    background: #ffffff;
+    transition: all 0.5s ease;
+  }
+  
+  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
+     background: #FDDCC4;
+     border: 2px solid #FDDCC4;
+  }
+
+  .btn-pets {
+    display: block;
+    cursor: pointer;
+    width: 261px;
+    height: 52px;
+    background: #f1cdb3;
+    border-radius: 100px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 52px;
+    letter-spacing: 0.06em;
+    color: #292929;
+    text-align: center;
+    margin: 60px auto 0;
+    transition: all 0.3s ease;
+  }
+
+  .btn-pets:hover{
+     background: #FDDCC4;
+  }
+
+  .btn-arrow {
+    margin-top: 192px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fddcc4;
+    background: #f6f6f6;
+    border-radius: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.btn-arrow:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #f1cdb3;
+}
+
+
+
+
+
+
+
