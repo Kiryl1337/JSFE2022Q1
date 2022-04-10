@@ -192,17 +192,20 @@ section.pets {
 }
 
 section.pets .container{
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
     align-content: center;
     display: flex;
     flex-flow: column wrap;
     gap: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px 100px 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
-section.pets .container h3 {
+section.pets .container h2 {
     font-family: "Georgia";
     font-style: normal;
     font-weight: 400;
@@ -233,6 +236,7 @@ section.pets .container h3 {
     border-radius: 9px;
     flex-flow: column wrap;
     align-items: center;
+    border-radius: 9px;
   }
 
   section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
@@ -285,7 +289,6 @@ section.pets .container h3 {
     letter-spacing: 0.06em;
     color: #292929;
     text-align: center;
-    margin: 60px auto 0;
     transition: all 0.3s ease;
   }
 
@@ -294,7 +297,6 @@ section.pets .container h3 {
   }
 
   .btn-arrow {
-    margin-top: 192px;
     display: flex;
     flex-direction: column;
     align-items: center;
