@@ -316,7 +316,63 @@ section.pets .container h2 {
     background-color: #f1cdb3;
 }
 
+/*========== HELP CONTENT ==========*/
 
+section.help {
+    background-color: #fff;
+}
+
+section.help .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+section.help .container h2 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding-top: 80px;
+}
+
+section.help .container .help-items {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    row-gap: 55px;
+    column-gap: 120px;
+    padding: 60px 87px 0 87px;
+}
+
+
+section.help .container .help-items .help-item {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+section.help .container .help-items .help-item .help-img {
+    margin: 0 auto;
+}
+
+section.help .container .help-items .help-item .item-name {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding-top: 30px;
+}
 
 
 
