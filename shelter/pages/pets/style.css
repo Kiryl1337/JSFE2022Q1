@@ -82,3 +82,80 @@ nav li:last-child {
     letter-spacing: 0.1em;
     color: #292929;
 }
+
+/*========== FOOTER CONTENT ==========*/
+
+footer {
+    max-width: 100%;
+    background: url(../../assets/images/footer-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    gap: 1px;
+}
+
+footer .container .footer-contacts {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 56px;
+}
+
+footer .container .footer-contacts h3 {
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    padding-top: 16px;
+}
+
+footer .container .footer-contacts .block-info {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    font-family: "Georgia";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #f1cdb3;
+    height: 23px;
+}
+
+footer .container .footer-contacts .block-info:last-child {
+    margin-top: 51px;
+}
+
+footer .container .footer-contacts .block-info h4 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 23px;
+    color: #f1cdb3;
+}
+
+footer .container .footer-contacts .block-info a img {
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+footer .container .footer-img {
+    margin-top: 40px;
+    width: 300px;
+    height: 310px;
+    overflow-y: hidden;
+}
