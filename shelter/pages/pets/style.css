@@ -9,9 +9,11 @@
 header {
     position: sticky;
     top: 0;
-    z-index: 5;
     width: 100%;
-    background: rgba(255, 255, 255, 0.7);
+    background: white;
+}
+
+header .container {
     padding: 30px 40px;
     display: flex;
     flex-flow: row wrap;
@@ -19,6 +21,7 @@ header {
     max-width: 1280px;
     margin: 0 auto;
     min-height: 100%;
+    width: 100%;
 }
 
 a {
@@ -133,6 +136,19 @@ section.pets .container h2 {
     cursor: pointer;
   }
 
+  section.pets .container .pet-card-items .pet-card-item:hover {
+    cursor: pointer;
+    background: #5b483a;
+  }
+
+section.pets .container .pet-card-items .pet-card-item:hover h3 {
+    color: #fafafa;
+}
+
+section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {
+    background: #f1cdb3;
+}
+
   section.pets .container .pet-card-items .pet-card-item h3 {
     font-family: "Georgia";
     font-style: normal;
@@ -149,17 +165,17 @@ section.pets .container h2 {
     height: 52px;
     border-radius: 100px;
     border: 2px solid #f1cdb3;
-    margin-bottom: 30px;
     font-family: "Georgia";
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
-    line-height: 52px;
+    line-height: 48px;
     letter-spacing: 0.06em;
     color: #292929;
     text-align: center;
     background: #ffffff;
     transition: all 0.5s ease;
+    margin-bottom: 30px;
   }
   
   section.pets .container .pet-card-items .pet-card-item .btn-learn-more:hover{

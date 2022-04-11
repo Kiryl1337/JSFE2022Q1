@@ -19,9 +19,9 @@ header {
     padding: 60px 40px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    
+    justify-content: space-between;  
 }
+
 
 nav {
     display: flex;
@@ -58,6 +58,10 @@ nav li:last-child {
 .nav-link:hover, .active {
     color: #ffffff;
     border-bottom: 3px solid #f1cdb3;
+}
+
+.logo {
+    text-align: center;
 }
 
 .logo h1 {
@@ -239,6 +243,19 @@ section.pets .container h2 {
     border-radius: 9px;
   }
 
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover {
+    cursor: pointer;
+    background: #5b483a;
+  }
+
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover h3 {
+    color: #fafafa;
+}
+
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover .btn-learn-more {
+    background: #f1cdb3;
+}
+
   section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
     margin-top: 30px;
     font-family: "Georgia";
@@ -261,7 +278,7 @@ section.pets .container h2 {
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
-    line-height: 52px;
+    line-height: 48px;
     letter-spacing: 0.06em;
     color: #292929;
     text-align: center;
