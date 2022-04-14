@@ -223,7 +223,7 @@ section.pets .container nav {
 }
 
 .btn-pagination:nth-child(3):hover {
-    background-color: #fddcc4;
+    cursor: default;
 }
 
 .btn-pagination.inactive {
