@@ -253,13 +253,12 @@ footer .container {
     margin: 0 auto;
     min-height: 100%;
     overflow-x: hidden;
-    gap: 1px;
+    padding: 40px 40px 0;
 }
 
 footer .container .footer-contacts {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 56px;
 }
 
 footer .container .footer-contacts h3 {
@@ -287,9 +286,11 @@ footer .container .footer-contacts .block-info {
     height: 23px;
 }
 
+
 footer .container .footer-contacts .block-info:last-child {
     margin-top: 51px;
 }
+
 
 footer .container .footer-contacts .block-info h4 {
     font-family: 'Georgia';
@@ -307,9 +308,7 @@ footer .container .footer-contacts .block-info a img {
 }
 
 footer .container .footer-img {
-    margin-top: 40px;
     width: 300px;
     height: 310px;
     overflow-y: hidden;
 }
-
