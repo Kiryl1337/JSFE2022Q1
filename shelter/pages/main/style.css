@@ -524,4 +524,47 @@ footer .container .footer-img {
     height: 310px;
     overflow-y: hidden;
 }
+ 
+@media (min-width:768px) and (max-width: 1279px) {
+    .start-screen {
+        background: url('../../assets/images/start-screen-background-768.png');
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        background-size: cover;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    section.start-screen-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    section.start-screen-content .block-info {
+        padding-top: 60px;
+    }
+
+    .btn-primary {
+        margin-left: 126px;
+    }
+
+    section.start-screen-content img{
+        height: 593px;
+        margin-left: 139px;
+    }
+
+    section.about .container {
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 80px;
+    }
   
+}
