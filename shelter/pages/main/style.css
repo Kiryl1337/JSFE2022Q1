@@ -698,4 +698,40 @@ footer .container .footer-img {
         height: 354px;
     }
 
+    section.pets .container{
+        gap: 42px;
+        padding: 42px 0;
+    }
+
+    section.pets .container h2 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        height: 64px;
+        width: 300px;
+    }
+
+    section.pets .container .pets-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 80px;
+        row-gap: 20px;
+    }
+
+    section.pets .container .pets-slider .btn-arrow:nth-child(1){
+        order: 1;
+    }
+
+    section.pets .container .pets-slider .btn-arrow:nth-child(3){
+        order: 2;
+    }
+
+    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(2) {
+        display: none;
+    }
+
+    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
+        display: none;
+    }
+
 }
