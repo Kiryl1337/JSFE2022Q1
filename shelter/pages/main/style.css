@@ -621,3 +621,43 @@ footer .container .footer-img {
     }
 
 }
+
+@media (max-width: 767px) {
+    
+    .start-screen {
+        background: radial-gradient(90% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    section.start-screen-content {
+        padding: 0 10px;
+        gap: 105px;
+    }
+    
+    section.start-screen-content .block-info {
+        align-items: center;
+        text-align: center;
+        padding-top: 60px;
+    }
+    
+    section.start-screen-content .block-info h2 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        max-width: 200px;
+    }
+    
+    section.start-screen-content img {
+        height: 272px;
+        margin-left: 40px;
+    }
+
+}
