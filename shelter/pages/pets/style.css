@@ -309,3 +309,48 @@ footer .container .footer-img {
     height: 310px;
     overflow-y: hidden;
 }
+
+@media (min-width:768px) and (max-width: 1279px) {
+
+    .start-screen {
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    header .container {
+        padding: 30px;
+    }
+
+    section.pets .container {
+        gap: 0;
+        padding-bottom: 78px;
+    } 
+
+    section.pets .container .pet-card-items{
+        padding: 28px 0 40px;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-last-child(1) {
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-last-child(2) {
+        display: none;
+    }
+
+    footer {
+        background: radial-gradient(70.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
+    }
+
+    footer .container {
+        flex-flow: row wrap;
+        column-gap: 62px;
+        row-gap: 65px;
+        padding: 15px 70px 0 62px;
+        justify-content: center;
+    }
+
+}
