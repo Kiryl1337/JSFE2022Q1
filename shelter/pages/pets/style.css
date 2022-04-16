@@ -6,7 +6,7 @@
 
 /*========== HEADER ==========*/
 
-.wrapper{
+.wrapper {
     max-width: 1280px;
     margin: 0 auto;
     min-height: 100%;
@@ -114,18 +114,18 @@ section.pets .container h2 {
     color: #545454;
     text-align: center;
     letter-spacing: 0.06em;
-  }
+}
 
-  section.pets .container .pet-card-items {
+section.pets .container .pet-card-items {
     padding: 15px 0 15px 0;
     justify-content: center;
     display: flex;
     flex-flow: row wrap;
     gap: 40px;
     row-gap: 30px;
-  }
+}
   
-  section.pets .container .pet-card-items .pet-card-item {
+section.pets .container .pet-card-items .pet-card-item {
     background: #fafafa;
     display: flex;
     border-radius: 9px;
@@ -133,12 +133,12 @@ section.pets .container h2 {
     gap: 30px;
     align-items: center;
     cursor: pointer;
-  }
+}
 
-  section.pets .container .pet-card-items .pet-card-item:hover {
+section.pets .container .pet-card-items .pet-card-item:hover {
     cursor: pointer;
     background: #5b483a;
-  }
+}
 
 section.pets .container .pet-card-items .pet-card-item:hover h3 {
     color: #fafafa;
@@ -148,7 +148,7 @@ section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {
     background: #f1cdb3;
 }
 
-  section.pets .container .pet-card-items .pet-card-item h3 {
+section.pets .container .pet-card-items .pet-card-item h3 {
     font-family: "Georgia";
     font-style: normal;
     font-weight: 400;
@@ -157,9 +157,13 @@ section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {
     letter-spacing: 0.06em;
     color: #545454;
     text-align: center;
-  }
+}
 
-  section.pets .container .pet-card-items .pet-card-item .btn-learn-more {
+section.pets .container .pet-card-items .pet-card-item .pet-img {
+    height: 270px;
+}
+
+section.pets .container .pet-card-items .pet-card-item .btn-learn-more {
     width: 187px;
     height: 52px;
     border-radius: 100px;
@@ -175,12 +179,12 @@ section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {
     background: #ffffff;
     transition: all 0.5s ease;
     margin-bottom: 30px;
-  }
+}
   
-  section.pets .container .pet-card-items .pet-card-item .btn-learn-more:hover{
+section.pets .container .pet-card-items .pet-card-item .btn-learn-more:hover{
      background: #FDDCC4;
      border: 2px solid #FDDCC4;
-  }
+}
 
 section.pets .container nav {
     max-width: 340px;
@@ -191,7 +195,7 @@ section.pets .container nav {
     gap: 20px;
 }
 
-  .btn-pagination {
+.btn-pagination {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -281,11 +285,9 @@ footer .container .footer-contacts .block-info {
     height: 23px;
 }
 
-
 footer .container .footer-contacts .block-info:last-child {
     margin-top: 51px;
 }
-
 
 footer .container .footer-contacts .block-info h4 {
     font-family: 'Georgia';

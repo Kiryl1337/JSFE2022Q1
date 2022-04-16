@@ -11,7 +11,7 @@
     background: radial-gradient(60% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1280px;
     margin: 0 auto;
     min-height: 100%;
@@ -197,7 +197,7 @@ section.pets .container{
     gap: 60px;
     justify-content: center;
     align-items: center;
-    padding: 80px 40px 95px 40px;
+    padding: 80px 40px 100px 40px;
 }
 
 section.pets .container h2 {
@@ -210,34 +210,34 @@ section.pets .container h2 {
     margin: 0 auto;
     text-align: center;
     letter-spacing: 0.06em;
-  }
-  section.pets .container .pets-slider {
+}
+
+section.pets .container .pets-slider {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  section.pets .container .pets-slider .pets-slider-items {
+section.pets .container .pets-slider .pets-slider-items {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     gap: 90px;
-  }
+}
   
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
     display: flex;
     background: #fafafa;
     border-radius: 9px;
     flex-flow: column wrap;
     align-items: center;
-    border-radius: 9px;
-  }
+}
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover {
     cursor: pointer;
     background: #5b483a;
-  }
+}
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover h3 {
     color: #fafafa;
@@ -247,7 +247,7 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     background: #f1cdb3;
 }
 
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
     margin-top: 30px;
     font-family: "Georgia";
     font-style: normal;
@@ -257,9 +257,13 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     letter-spacing: 0.06em;
     color: #545454;
     text-align: center;
-  }
+}
 
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .pet-img {
+      height: 270px;
+}
+
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
     width: 187px;
     height: 52px;
     border-radius: 100px;
@@ -275,14 +279,14 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     text-align: center;
     background: #ffffff;
     transition: all 0.5s ease;
-  }
+}
   
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
      background: #FDDCC4;
      border: 2px solid #FDDCC4;
-  }
+}
 
-  .btn-pets {
+.btn-pets {
     display: block;
     cursor: pointer;
     width: 261px;
@@ -298,13 +302,13 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     color: #292929;
     text-align: center;
     transition: all 0.3s ease;
-  }
+}
 
-  .btn-pets:hover{
+.btn-pets:hover{
      background: #FDDCC4;
-  }
+}
 
-  .btn-arrow {
+.btn-arrow {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -387,7 +391,7 @@ section.donation .container {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    padding: 80px 0 100px 0;
+    padding: 80px 0 98px 0;
     gap: 30px;
 }
 
@@ -526,6 +530,7 @@ footer .container .footer-img {
 }
  
 @media (min-width:768px) and (max-width: 1279px) {
+
     .start-screen {
         background: url('../../assets/images/start-screen-background-768.png');
         background-repeat: no-repeat;
@@ -566,7 +571,6 @@ footer .container .footer-img {
         align-items: center;
         row-gap: 80px;
     }
-  
     
     section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
         display: none;
@@ -616,5 +620,4 @@ footer .container .footer-img {
         justify-content: center;
     }
 
-   
 }
