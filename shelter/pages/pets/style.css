@@ -355,6 +355,61 @@ footer .container .footer-img img{
 
 @media (max-width: 767px) {
 
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    header .container{
+        padding: 30px 10px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    section.pets .container {
+        padding: 42px 0;
+        gap: 42px;
+    }
+
+    section.pets .container .pet-card-items {
+        padding: 0;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(4){
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(5){
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(6){
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(7){
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(8){
+        display: none;
+    }
+
+    section.pets .container .pet-card-items .pet-card-item:nth-child(9){
+        display: none;
+    }
+
+    section.pets .container h2 {
+        font-size: 25px;
+        line-height: 32px;
+        width: 300px;
+    }
+
+    section.pets .container nav {
+        gap: 10px;
+    }
+    
     footer {
         background: radial-gradient(100.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
     }
