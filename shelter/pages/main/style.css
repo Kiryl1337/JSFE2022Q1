@@ -769,8 +769,61 @@ footer .container .footer-img {
 
     section.help .container .help-items .help-item .item-name {
         font-size: 15px;
-        line-height: 110%;
-        padding-top: 20px;    
+        line-height: 110%;  
+        padding-top: 20px;
     }
+
+    section.donation .container {
+        flex-flow: column-reverse;
+        padding-top: 42px;
+        padding-bottom: 42px;
+        gap: 42px;
+    }
+
+    section.donation .container .donation-content {
+        width: 300px;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section.donation .container img {
+        width: 260px;
+        height: 135px;
+    }
+
+    section.donation .container .donation-content h3 {
+        font-size: 25px;
+        line-height: 127%;
+        text-align: center;
+        padding-left: 38px;
+    }
+
+    section.donation .container .donation-content h5 {
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: normal;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    section.donation .container .donation-content .donation-card {
+        width: 281px;
+        align-items: center;
+    }    
+
+    section.donation .container .donation-content .donation-card a img {
+        width: 30px;
+        height: 23px;
+    }  
+
+    section.donation .container .donation-content .donation-card a {
+        font-size: 15px;
+        align-items: center;
+    }  
+
+    section.donation .container .donation-content p {
+        text-align: justify;
+    }  
 
 }
