@@ -523,10 +523,8 @@ footer .container .footer-contacts .block-info a img {
     vertical-align: top;
 }
 
-footer .container .footer-img {
-    width: 300px;
-    height: 310px;
-    overflow-y: hidden;
+footer .container .footer-img img{
+    display: block;
 }
  
 @media (min-width:768px) and (max-width: 1279px) {
@@ -825,5 +823,59 @@ footer .container .footer-img {
     section.donation .container .donation-content p {
         text-align: justify;
     }  
+
+    footer {
+        background: radial-gradient(100.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    }
+
+    footer .container .footer-contacts h3 {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 0;
+        width: 270px;
+    }
+
+    footer .container .footer-contacts {
+        align-items: center;
+    }
+
+    footer .container .footer-img {
+        margin-top: 55px;
+        width: 260px;
+        height: 269px;
+    }
+
+    footer .container .footer-img img {
+        width: 260px;
+        height: 269px;
+    }
+
+    footer .container {
+        row-gap: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px 0;
+    }
+
+    footer .container .footer-contacts:nth-child(1) h3 {
+       text-align: center;
+    }
+
+    footer .container .footer-contacts:nth-child(2) h3 {
+        padding-top: 40px;
+     }
+
+    footer .container .footer-contacts:nth-child(2) .block-info a {
+        padding-top: 15px;
+    }
+
+    footer .container .footer-contacts:nth-child(2) .block-info:nth-child(3) a {
+        padding-top: 25px;
+        padding-right: 25px;
+    }
+
+    footer .container .footer-contacts h3 br {
+        display: none;
+    }
 
 }
