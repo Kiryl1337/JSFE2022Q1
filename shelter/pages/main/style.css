@@ -11,21 +11,27 @@
     background: radial-gradient(60% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
 }
 
-header {
+.wrapper {
     max-width: 1280px;
     margin: 0 auto;
     min-height: 100%;
     overflow-x: hidden;
+}
+
+header {
     padding: 60px 40px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;  
 }
 
-
 nav {
     display: flex;
     align-items: center;
+}
+
+.burger{
+    display: none;
 }
 
 a {
@@ -73,6 +79,7 @@ nav li:last-child {
     letter-spacing: 0.06em;
     color: #f1cdb3;
     margin-bottom: 10px;
+    margin-top: 0;
 }
 
 .logo p {
@@ -88,10 +95,6 @@ nav li:last-child {
 /*========== START SCREEN CONTENT ==========*/
 
 section.start-screen-content {
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     gap: 42px;
@@ -156,10 +159,6 @@ section.about .container {
     align-items: center;
     gap: 120px;
     padding: 80px 40px 100px 40px;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
 }
 
 section.about .container .block-info {
@@ -203,10 +202,6 @@ section.pets .container{
     justify-content: center;
     align-items: center;
     padding: 80px 40px 100px 40px;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
 }
 
 section.pets .container h2 {
@@ -219,34 +214,35 @@ section.pets .container h2 {
     margin: 0 auto;
     text-align: center;
     letter-spacing: 0.06em;
-  }
-  section.pets .container .pets-slider {
+}
+
+section.pets .container .pets-slider {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
-  section.pets .container .pets-slider .pets-slider-items {
+section.pets .container .pets-slider .pets-slider-items {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     gap: 90px;
-  }
+    width: 100%;
+}
   
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
     display: flex;
     background: #fafafa;
     border-radius: 9px;
     flex-flow: column wrap;
     align-items: center;
-    border-radius: 9px;
-  }
+}
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover {
     cursor: pointer;
     background: #5b483a;
-  }
+}
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover h3 {
     color: #fafafa;
@@ -256,7 +252,7 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     background: #f1cdb3;
 }
 
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
     margin-top: 30px;
     font-family: "Georgia";
     font-style: normal;
@@ -266,9 +262,13 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     letter-spacing: 0.06em;
     color: #545454;
     text-align: center;
-  }
+}
 
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .pet-img {
+      height: 270px;
+}
+
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
     width: 187px;
     height: 52px;
     border-radius: 100px;
@@ -284,14 +284,14 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     text-align: center;
     background: #ffffff;
     transition: all 0.5s ease;
-  }
+}
   
-  section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
+section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
      background: #FDDCC4;
      border: 2px solid #FDDCC4;
-  }
+}
 
-  .btn-pets {
+.btn-pets {
     display: block;
     cursor: pointer;
     width: 261px;
@@ -307,19 +307,19 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover 
     color: #292929;
     text-align: center;
     transition: all 0.3s ease;
-  }
+}
 
-  .btn-pets:hover{
+.btn-pets:hover{
      background: #FDDCC4;
-  }
+}
 
-  .btn-arrow {
+.btn-arrow {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
     border: 2px solid #fddcc4;
     background: #f6f6f6;
     border-radius: 100%;
@@ -340,13 +340,6 @@ section.help {
     padding-bottom: 100px;
 }
 
-section.help .container {
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
-}
-
 section.help .container h2 {
     font-family: 'Georgia';
     font-style: normal;
@@ -359,12 +352,18 @@ section.help .container h2 {
     padding-top: 80px;
 }
 
+section.help .container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section.help .container .help-items {
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
+    column-gap: 119px;
     row-gap: 55px;
-    column-gap: 120px;
+    justify-content: center;
     padding: 60px 87px 0 87px;
 }
 
@@ -376,7 +375,7 @@ section.help .container .help-items .help-item {
 }
 
 section.help .container .help-items .help-item .help-img {
-    margin: 0 auto;
+    height: 60px;
 }
 
 section.help .container .help-items .help-item .item-name {
@@ -403,12 +402,8 @@ section.donation .container {
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    padding: 80px 0 100px 0;
+    padding: 80px 0 98px 0;
     gap: 30px;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
 }
 
 section.donation .container .donation-content {
@@ -485,17 +480,12 @@ footer .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
-    min-height: 100%;
-    overflow-x: hidden;
-    gap: 1px;
+    padding: 40px 40px 0;
 }
 
 footer .container .footer-contacts {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 56px;
 }
 
 footer .container .footer-contacts h3 {
@@ -544,10 +534,384 @@ footer .container .footer-contacts .block-info a img {
     vertical-align: top;
 }
 
-footer .container .footer-img {
-    margin-top: 40px;
-    width: 300px;
-    height: 310px;
-    overflow-y: hidden;
+footer .container .footer-img img{
+    display: block;
 }
-  
+ 
+@media (max-width: 1279px) {
+
+    .start-screen {
+        background: url('../../assets/images/start-screen-background-768.png');
+        background-repeat: no-repeat;
+        background-position: center 0px;
+        background-size: cover;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    section.start-screen-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+    }
+
+    section.start-screen-content .block-info {
+        padding-top: 60px;
+    }
+
+    .btn-primary {
+        margin-left: 126px;
+    }
+
+    section.start-screen-content img{
+        height: 593px;
+        margin-left: 139px;
+    }
+
+    section.about .container {
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 80px;
+    }
+    
+    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
+        display: none;
+    }
+
+    section.pets .container{
+        padding: 80px 0 100px;
+    }
+
+    section.pets .container .pets-slider {
+        width: auto;
+    }
+
+    section.pets .container .pets-slider .pets-slider-items {
+        display: flex;
+        justify-content: center;
+        column-gap: 40px;
+        padding: 0 12px;
+    }
+
+    section.help .container .help-items {
+        column-gap: 60px;
+        width: 630px;
+        align-items: center;
+        padding: 60px 0 0;
+    }
+
+    section.help .container .help-items .help-item {
+        width: 170px;
+    }
+
+    section.donation .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column-reverse;
+        row-gap: 60px;
+    }
+
+    footer {
+        background: radial-gradient(70.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
+    }
+
+    footer .container {
+        flex-flow: row wrap;
+        column-gap: 62px;
+        row-gap: 65px;
+        padding: 15px 70px 0 62px;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+    
+    .start-screen {
+        background: radial-gradient(90% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        margin-right: 43px;
+        margin-top: 19px;
+    }
+    
+    .burger .line {
+        width: 30px;
+        height: 9.1%;
+        background-color: #f1cdb3;
+        display: block;
+    }
+
+    section.start-screen-content {
+        padding: 0 10px;
+        gap: 105px;
+    }
+    
+    section.start-screen-content .block-info {
+        align-items: center;
+        text-align: center;
+        padding-top: 60px;
+    }
+    
+    section.start-screen-content .block-info h2 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        max-width: 200px;
+    }
+    
+    section.start-screen-content img {
+        height: 272px;
+        margin-left: 40px;
+    }
+
+    section.start-screen-content .btn-primary {
+        margin: 0;
+    }
+
+    section.about .container {
+        display: flex;
+        flex-flow: row wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 42px;
+        padding: 45px 5px 42px;
+    }
+
+    section.about .container .block-info {
+        align-items: center;
+        width: 270px;
+        gap: 0;
+    }
+
+    section.about .container .block-info p:nth-last-child(1) {
+        padding-top: 22px;
+        text-align: justify;
+    }
+
+    section.about .container .block-info p:nth-last-child(2) {
+        padding-top: 24px;
+        text-align: justify;
+    }
+
+    section.about .container .block-info h3 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    section.about .container img {
+        width: 260px;
+        height: 354px;
+    }
+
+    section.pets .container{
+        gap: 42px;
+        padding: 42px 0;
+    }
+
+    section.pets .container h2 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        height: 64px;
+        width: 300px;
+    }
+
+    section.pets .container .pets-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 80px;
+        row-gap: 20px;
+    }
+
+    section.pets .container .pets-slider .btn-arrow:nth-child(1){
+        order: 1;
+    }
+
+    section.pets .container .pets-slider .btn-arrow:nth-child(3){
+        order: 2;
+    }
+
+    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(2) {
+        display: none;
+    }
+
+    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
+        display: none;
+    }
+
+    section.help {
+        padding-bottom: 0;
+    }
+
+    section.help .container h2 {
+        font-size: 25px;
+        line-height: 32px;
+        letter-spacing: 0.06em;
+        padding-top: 42px;
+    }
+
+    section.help .container .help-items {
+        width: 291px;
+        justify-content: space-between;
+        column-gap: 15px;
+        row-gap: 30px;
+        padding: 42px 0;
+    }
+
+    section.help .container .help-items .help-item {
+        width: 130px;
+        height: 87px;
+    }
+
+    section.help .container .help-items .help-item .help-img {
+        width: 50px;
+        height: 50px;
+    }
+
+    section.help .container .help-items .help-item .help-img img {
+        width: 50px;
+        height: 50px;
+    }
+
+    section.help .container .help-items .help-item .item-name {
+        font-size: 15px;
+        line-height: 110%;  
+        padding-top: 20px;
+    }
+
+    section.donation .container {
+        flex-flow: column-reverse;
+        padding-top: 42px;
+        padding-bottom: 42px;
+        gap: 42px;
+    }
+
+    section.donation .container .donation-content {
+        width: 300px;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section.donation .container img {
+        width: 260px;
+        height: 135px;
+    }
+
+    section.donation .container .donation-content h3 {
+        font-size: 25px;
+        line-height: 127%;
+        text-align: center;
+        padding-left: 38px;
+    }
+
+    section.donation .container .donation-content h5 {
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: normal;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    section.donation .container .donation-content .donation-card {
+        width: 281px;
+        align-items: center;
+    }    
+
+    section.donation .container .donation-content .donation-card a img {
+        width: 30px;
+        height: 23px;
+    }  
+
+    section.donation .container .donation-content .donation-card a {
+        font-size: 15px;
+        align-items: center;
+    }  
+
+    section.donation .container .donation-content p {
+        text-align: justify;
+    }  
+
+    footer {
+        background: radial-gradient(100.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    }
+
+    footer .container .footer-contacts h3 {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 0;
+        width: 270px;
+    }
+
+    footer .container .footer-contacts {
+        align-items: center;
+    }
+
+    footer .container .footer-img {
+        margin-top: 55px;
+        width: 260px;
+        height: 269px;
+    }
+
+    footer .container .footer-img img {
+        width: 260px;
+        height: 269px;
+    }
+
+    footer .container {
+        row-gap: 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px 0;
+    }
+
+    footer .container .footer-contacts:nth-child(1) h3 {
+       text-align: center;
+    }
+
+    footer .container .footer-contacts:nth-child(2) h3 {
+        padding-top: 40px;
+     }
+
+    footer .container .footer-contacts:nth-child(2) .block-info a {
+        padding-top: 15px;
+    }
+
+    footer .container .footer-contacts:nth-child(2) .block-info:nth-child(3) a {
+        padding-top: 25px;
+        padding-right: 25px;
+    }
+
+    footer .container .footer-contacts h3 br {
+        display: none;
+    }
+
+}
