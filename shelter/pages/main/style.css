@@ -228,6 +228,7 @@ section.pets .container .pets-slider .pets-slider-items {
     justify-content: center;
     flex-flow: row wrap;
     gap: 90px;
+    width: 100%;
 }
   
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
@@ -317,8 +318,8 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-l
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 52px;
-    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
     border: 2px solid #fddcc4;
     background: #f6f6f6;
     border-radius: 100%;
@@ -351,12 +352,18 @@ section.help .container h2 {
     padding-top: 80px;
 }
 
+section.help .container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section.help .container .help-items {
     display: flex;
-    justify-content: center;
     flex-flow: row wrap;
+    column-gap: 119px;
     row-gap: 55px;
-    column-gap: 120px;
+    justify-content: center;
     padding: 60px 87px 0 87px;
 }
 
@@ -531,7 +538,7 @@ footer .container .footer-img img{
     display: block;
 }
  
-@media (min-width:768px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
 
     .start-screen {
         background: url('../../assets/images/start-screen-background-768.png');
@@ -595,6 +602,8 @@ footer .container .footer-img img{
 
     section.help .container .help-items {
         column-gap: 60px;
+        width: 630px;
+        align-items: center;
         padding: 60px 0 0;
     }
 
@@ -678,6 +687,10 @@ footer .container .footer-img img{
     section.start-screen-content img {
         height: 272px;
         margin-left: 40px;
+    }
+
+    section.start-screen-content .btn-primary {
+        margin: 0;
     }
 
     section.about .container {
@@ -766,10 +779,11 @@ footer .container .footer-img img{
     }
 
     section.help .container .help-items {
+        width: 291px;
         justify-content: space-between;
-        column-gap: 30px; 
-        row-gap: 30px; 
-        padding: 42px 5px;
+        column-gap: 15px;
+        row-gap: 30px;
+        padding: 42px 0;
     }
 
     section.help .container .help-items .help-item {

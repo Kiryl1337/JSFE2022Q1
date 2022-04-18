@@ -64,6 +64,10 @@ nav li:last-child {
     border-bottom: 3px solid #f1cdb3;
 }
 
+.burger{
+    display: none;
+}
+
 .logo {
     text-align: center;
 }
@@ -119,6 +123,7 @@ section.pets .container h2 {
 section.pets .container .pet-card-items {
     padding: 15px 0 15px 0;
     justify-content: center;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
     gap: 40px;
@@ -133,6 +138,8 @@ section.pets .container .pet-card-items .pet-card-item {
     gap: 30px;
     align-items: center;
     cursor: pointer;
+    width: 270px; 
+    height: 435px;
 }
 
 section.pets .container .pet-card-items .pet-card-item:hover {
@@ -308,7 +315,7 @@ footer .container .footer-img img{
     display: block;
 }
 
-@media (min-width:768px) and (max-width: 1279px) {
+@media (max-width: 1279px) {
 
     .start-screen {
         padding-top: 30px;
@@ -329,6 +336,7 @@ footer .container .footer-img img{
 
     section.pets .container .pet-card-items{
         padding: 28px 0 40px;
+        width: 580px;
     }
 
     section.pets .container .pet-card-items .pet-card-item:nth-last-child(1) {
@@ -391,7 +399,10 @@ footer .container .footer-img img{
     }
 
     section.pets .container .pet-card-items {
+        display: flex;
         padding: 0;
+        width: 100%;
+        flex-direction: column;
     }
 
     section.pets .container .pet-card-items .pet-card-item:nth-child(4){
