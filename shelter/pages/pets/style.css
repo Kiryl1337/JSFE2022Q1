@@ -363,6 +363,24 @@ footer .container .footer-img img{
         padding: 30px 10px;
     }
 
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        margin-right: 43px;
+        margin-top: 19px;
+    }
+    
+    .burger .line {
+        width: 30px;
+        height: 9.1%;
+        background-color: #000000;
+        display: block;
+    }
+
     header nav {
         display: none;
     }
