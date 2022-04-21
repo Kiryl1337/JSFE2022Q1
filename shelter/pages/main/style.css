@@ -727,6 +727,16 @@ footer .container .footer-img img{
         transition: 1s;
     }
 
+    div.layer-open-menu {
+        position: absolute;
+        background: rgb(41, 41, 41);
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     section.start-screen-content {
         padding: 0 10px;
         gap: 105px;
