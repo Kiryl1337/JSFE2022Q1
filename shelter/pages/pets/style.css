@@ -68,11 +68,11 @@ nav li:last-child {
     display: none;
 }
 
-.logo {
+.logo,  .burger-logo {
     text-align: center;
 }
 
-.logo h1 {
+.logo h1, .burger-logo h1 {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -83,7 +83,7 @@ nav li:last-child {
     margin-bottom: 10px;
 }
 
-.logo p {
+.logo p, .burger-logo p {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
@@ -371,6 +371,50 @@ footer .container .footer-img img{
         padding: 30px 10px;
     }
 
+    header nav {
+        position: fixed;
+        flex-direction: column;
+        height: 100%;
+        top: 0;
+        right: -320px;
+        transition: 1.2s;
+    }
+
+    header.open-menu {
+        position: relative;
+    }
+
+    body.open-menu {
+        overflow-y: hidden;
+    }
+
+    header nav.open-menu {
+        width: 320px;
+        right: 0px;
+        transition: 1.2s;
+        z-index: 2;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: #FFFFFF;
+        width: 320px;
+        height: 100%;
+        padding: 248px 0 0 0;
+        gap: 41px;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        font-size: 32px;
+        line-height: 51px;
+    }
+
+    header nav .nav-link {
+        padding-bottom: 6px;
+    }
+
     .burger {
         display: flex;
         flex-direction: column;
@@ -380,6 +424,12 @@ footer .container .footer-img img{
         cursor: pointer;
         margin-right: 43px;
         margin-top: 19px;
+        z-index: 2;
+    }
+
+    .burger.open-menu {
+        transform: rotate(90deg);
+        transition: 1.2s;
     }
     
     .burger .line {
@@ -389,9 +439,34 @@ footer .container .footer-img img{
         display: block;
     }
 
-    header nav {
-        display: none;
+    .burger-logo {
+        display: block;
+        padding-top: 30px;
+        padding-left: 10px;
+        position: absolute;
+        left: 0;
     }
+
+    header .logo {
+        transition: 1s;
+    }
+
+    header .logo.open-menu{
+        opacity: 0;
+        transition: 1s;
+    }
+
+    div.layer-open-menu {
+        position: absolute;
+        background: rgb(41, 41, 41);
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
 
     section.pets .container {
         padding: 42px 0;
