@@ -1,4 +1,4 @@
-import petsArr from './pets.js';
+import petsArr from './main/pets.js';
 
 // BURGER MENU
 
@@ -9,6 +9,7 @@ function openMenu(){
     document.querySelector('.burger').classList.toggle('open-menu')
     document.querySelector('nav').classList.toggle('open-menu')
     document.querySelector('body').classList.toggle('open-menu')
+    document.querySelector('header').classList.toggle('open-menu')
     document.querySelector('.logo').classList.toggle('open-menu')
     divLayer.classList.toggle('layer-open-menu')
 }
@@ -31,7 +32,7 @@ function openModal(event) {
   document.querySelector('body').classList.toggle('open-modal')
   document.querySelector('.modal-window-wrapper').style.display = 'block';
   divBlackout.classList.add('blackout');
-  const petName = event.currentTarget.querySelector('section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3').innerHTML;
+  const petName = event.currentTarget.querySelector('section.pets .container .pet-card-items .pet-card-item h3').innerHTML;
   const petInfo = petsArr.find((_, i, arr) => {
     if (arr[i]["name"] === petName) {
       return arr[i];
@@ -54,7 +55,7 @@ function closeModal() {
   divBlackout.classList.remove('blackout')
 }
 
-document.querySelectorAll('.pets-slider-item').forEach((el) => { 
+document.querySelectorAll('.pet-card-item').forEach((el) => { 
     el.addEventListener('click', openModal) 
 }); 
 

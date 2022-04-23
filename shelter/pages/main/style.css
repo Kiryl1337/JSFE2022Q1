@@ -223,7 +223,7 @@ section.pets .container .pets-slider {
     align-items: center;
 }
   
-section.pets .container .pets-slider .pets-slider-items {
+section.pets .container .pets-slider .pet-card-items {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
@@ -231,7 +231,7 @@ section.pets .container .pets-slider .pets-slider-items {
     width: 100%;
 }
   
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
+section.pets .container .pets-slider .pet-card-items .pet-card-item {
     display: flex;
     background: #fafafa;
     border-radius: 9px;
@@ -239,18 +239,18 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
     align-items: center;
 }
 
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover {
+section.pets .container .pets-slider .pet-card-items .pet-card-item:hover {
     cursor: pointer;
     background: #fafafa;
     box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.1);
     transition: 0.7s;
 }
 
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover .btn-learn-more {
+section.pets .container .pets-slider .pet-card-items .pet-card-item:hover .btn-learn-more {
     background: #f1cdb3;
 }
 
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
+section.pets .container .pets-slider .pet-card-items .pet-card-item h3 {
     margin-top: 30px;
     font-family: "Georgia";
     font-style: normal;
@@ -262,11 +262,11 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
     text-align: center;
 }
 
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item .pet-img {
+section.pets .container .pets-slider .pet-card-items .pet-card-item .pet-img {
     height: 270px;
 }
 
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
+section.pets .container .pets-slider .pet-card-items .pet-card-item .btn-learn-more {
     width: 187px;
     height: 52px;
     border-radius: 100px;
@@ -284,7 +284,7 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-l
     transition: all 0.5s ease;
 }
   
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more:hover{
+section.pets .container .pets-slider .pet-card-items .pet-card-item .btn-learn-more:hover{
      background: #FDDCC4;
      border: 2px solid #FDDCC4;
 }
@@ -701,7 +701,7 @@ footer .container .footer-img img{
         row-gap: 80px;
     }
     
-    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
+    section.pets .container .pets-slider .pet-card-items .pet-card-item:nth-child(3) {
         display: none;
     }
 
@@ -713,7 +713,7 @@ footer .container .footer-img img{
         width: auto;
     }
 
-    section.pets .container .pets-slider .pets-slider-items {
+    section.pets .container .pets-slider .pet-card-items {
         display: flex;
         justify-content: center;
         column-gap: 40px;
@@ -977,11 +977,11 @@ footer .container .footer-img img{
         order: 2;
     }
 
-    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(2) {
+    section.pets .container .pets-slider .pet-card-items .pet-card-item:nth-child(2) {
         display: none;
     }
 
-    section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
+    section.pets .container .pets-slider .pet-card-items .pet-card-item:nth-child(3) {
         display: none;
     }
 

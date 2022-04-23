@@ -244,6 +244,127 @@ section.pets .container nav {
     background-color: #f6f6f6;
 }
 
+body.open-modal {
+    overflow-y: hidden;
+}
+
+.modal-window-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    z-index: 2;
+    display: none;
+}
+
+.blackout {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(41, 41, 41, 0.6);
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+.modal-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.btn-modal-close {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+    padding: 0;
+    line-height: 0;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    background-color: transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-modal-close:hover {
+    background: #F1CDB3;
+}
+
+.modal-window-container {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+
+.modal-window-container img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+}
+
+.modal-window-content {
+    padding: 0 19.5px 0 29px;
+    align-self: flex-start;
+}
+
+.modal-window-content .pet-name {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    padding: 50px 0 10px;
+}
+
+.modal-window-content .pet-description {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    padding: 40px 0;
+}
+
+.modal-window-content .pet-type {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
+.pet-info {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.pet-info li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    background-image: url(../../assets/icons/dot.svg);
+    background-position: left 0 top 6.5px;
+    background-size: 4px 4px;
+    background-repeat: no-repeat;
+}
+
 /*========== FOOTER CONTENT ==========*/
 
 footer {
@@ -344,6 +465,34 @@ footer .container .footer-img img{
     section.pets .container .pet-card-items .pet-card-item:nth-last-child(2) {
         display: none;
     }
+
+    .modal-window-container {
+        width: 630px;
+    }
+
+    .modal-window-container img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .modal-window-content {
+        padding: 0 8px 0 11px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        font-size: 13px;
+        line-height: 14px;
+        padding: 20px 0;
+    }
+
+    .pet-info li {
+        margin-bottom: 5px;
+    }
+
 
     footer {
         background: radial-gradient(70.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
@@ -511,6 +660,45 @@ footer .container .footer-img img{
     section.pets .container nav {
         gap: 10px;
     }
+
+    .modal-window-container {
+        width: 240px;
+        padding-bottom: 10px;
+    }
+
+    .modal-window-container img {
+        display: none;
+    }
+
+    .btn-modal-close {
+        right: -30px;
+    }
+
+    .modal-window-content .pet-name {
+        text-align: center;
+    }
+    
+    .modal-window-content .pet-type {
+        text-align: center;
+    }
+
+    .modal-window-content {
+        padding: 0 10px 0 10px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        text-align: justify;
+        padding-bottom: 24px;
+    }
+
+    .pet-info ul li {
+        margin-bottom: 5px;
+    }
+
     
     footer {
         background: radial-gradient(100.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
