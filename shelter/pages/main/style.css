@@ -718,6 +718,34 @@ footer .container .footer-img img{
         padding: 0 12px;
     }
 
+    .modal-window-container {
+        width: 630px;
+        height: 350px;
+    }
+
+    .modal-window-container img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .modal-window-content {
+        padding: 0 8px 0 11px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        font-size: 13px;
+        line-height: 14px;
+        padding: 20px 0;
+    }
+
+    .pet-info li {
+        margin-bottom: 5px;
+    }
+
     section.help .container .help-items {
         column-gap: 60px;
         width: 630px;
@@ -954,6 +982,45 @@ footer .container .footer-img img{
 
     section.pets .container .pets-slider .pets-slider-items .pets-slider-item:nth-child(3) {
         display: none;
+    }
+
+    .modal-window-container {
+        width: 240px;
+        height: 341px;
+    }
+
+    .modal-window-container img {
+        display: none;
+    }
+
+    .btn-modal-close {
+        right: -30px;
+    }
+
+    .modal-window-content .pet-name {
+        text-align: center;
+    }
+    
+    
+    .modal-window-content .pet-type {
+        text-align: center;
+    }
+
+    .modal-window-content {
+        padding: 0 10px 0 10px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        text-align: justify;
+        padding-bottom: 24px;
+    }
+
+    .pet-info ul li {
+        margin-bottom: 5px;
     }
 
     section.help {
