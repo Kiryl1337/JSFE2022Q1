@@ -142,13 +142,11 @@ section.pets .container .pet-card-items .pet-card-item {
     height: 435px;
 }
 
-section.pets .container .pet-card-items .pet-card-item:hover {
+section.pets .container .pet-card-items .pet-card-item:hover  {
     cursor: pointer;
-    background: #5b483a;
-}
-
-section.pets .container .pet-card-items .pet-card-item:hover h3 {
-    color: #fafafa;
+    background: #fafafa;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.1);
+    transition: 0.7s;
 }
 
 section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {

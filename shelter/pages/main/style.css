@@ -241,11 +241,9 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item {
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover {
     cursor: pointer;
-    background: #5b483a;
-}
-
-section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover h3 {
-    color: #fafafa;
+    background: #fafafa;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.1);
+    transition: 0.7s;
 }
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item:hover .btn-learn-more {
@@ -265,7 +263,7 @@ section.pets .container .pets-slider .pets-slider-items .pets-slider-item h3 {
 }
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item .pet-img {
-      height: 270px;
+    height: 270px;
 }
 
 section.pets .container .pets-slider .pets-slider-items .pets-slider-item .btn-learn-more {
