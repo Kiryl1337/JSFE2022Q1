@@ -18,8 +18,14 @@
                 </a>
             </div>
             <nav>
+                <div class="burger-logo">
+                    <a href="#">
+                        <h1>Cozy House</h1>
+                        <p>Shelter for pets in Boston</p>
+                    </a>
+                </div>
                 <ul>
-                    <li><a class="nav-link active" href="#about">About the shelter</a></li>
+                    <li><a class="nav-link active" href="#">About the shelter</a></li>
                     <li><a class="nav-link" href="../pets/index.html">Our pets</a></li>
                     <li><a class="nav-link" href="#help">Help the shelter</a></li>
                     <li><a class="nav-link" href="#footer">Contacts</a></li>
@@ -75,22 +81,22 @@
                 <button class="btn-arrow">
                     <img src="../../assets/icons/arrow_left.svg" alt="Arrow left" />
                 </button>
-                <div class="pets-slider-items">
-                    <div class="pets-slider-item">
+                <div class="pet-card-items">
+                    <div class="pet-card-item">
                         <div class="pet-img">
                             <img src="../../assets/images/katrine.png" alt="Katrine img" />
                         </div>
                         <h3>Katrine</h3>
                         <div class="btn-learn-more" href="#!">Learn more</div>
                     </div>
-                    <div class="pets-slider-item">
+                    <div class="pet-card-item">
                         <div class="pet-img">
                             <img src="../../assets/images/jennifer.png" alt="Jennifer img" />
                         </div>
                         <h3>Jennifer</h3>
                         <div class="btn-learn-more" href="#!">Learn more</div>
                     </div>
-                    <div class="pets-slider-item">
+                    <div class="pet-card-item">
                         <div class="pet-img">
                             <img src="../../assets/images/woody.png" alt="Woody img" />
                         </div>
@@ -105,6 +111,40 @@
             <a href="../pets/index.html" class="btn-pets">
                 Get to know the rest</a
             >
+            <div class="modal-window-wrapper">
+                <div class="modal-window">
+                    <button class="btn-modal-close"><img src="../../assets/icons/close.svg" alt="X"></button>
+                    <div class="modal-window-container">
+                        <img alt="Pet image" src="../../assets/images/jennifer.png">
+                        <div class="modal-window-content">
+                            <h3 class="pet-name">Jennifer</h3>
+                            <h4 class="pet-type">Dog - Labrador</h4>
+                            <p class="pet-description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. 
+                                This girl really enjoys being able to go outside to run and play, but won't hesitate to play
+                                up a storm in the house if she has all of her favorite toys.
+                            </p>
+                            <ul class="pet-info">
+                                <li class="pet-age">
+                                    <b class="title age">Age:</b>
+                                    <span class="value age">2 months</span>
+                                </li>
+                                <li class="pet-inoculations">
+                                    <b class="title inoculations">Inoculations:</b>
+                                    <span class="value inoculations">none</span>
+                                </li>
+                                <li class="pet-diseases">
+                                    <b class="title diseases">Diseases:</b>
+                                    <span class="value diseases">none</span>
+                                </li>
+                                <li class="pet-parasites">
+                                    <b class="title parasites">Parasites:</b>
+                                    <span class="value parasites">none</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -233,4 +273,6 @@
         </div>
       </footer>
 </body>
+<script type="module" src="../script.js"></script>
+<script type="module" src="./main.js"></script>
 </html>

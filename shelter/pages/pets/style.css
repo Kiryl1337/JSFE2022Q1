@@ -64,15 +64,15 @@ nav li:last-child {
     border-bottom: 3px solid #f1cdb3;
 }
 
-.burger{
+.burger, .burger-logo {
     display: none;
 }
 
-.logo {
+.logo,  .burger-logo {
     text-align: center;
 }
 
-.logo h1 {
+.logo h1, .burger-logo h1 {
     font-family: 'Georgia';
     font-style: normal;
     font-weight: 400;
@@ -83,7 +83,7 @@ nav li:last-child {
     margin-bottom: 10px;
 }
 
-.logo p {
+.logo p, .burger-logo p {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
@@ -142,13 +142,11 @@ section.pets .container .pet-card-items .pet-card-item {
     height: 435px;
 }
 
-section.pets .container .pet-card-items .pet-card-item:hover {
+section.pets .container .pet-card-items .pet-card-item:hover  {
     cursor: pointer;
-    background: #5b483a;
-}
-
-section.pets .container .pet-card-items .pet-card-item:hover h3 {
-    color: #fafafa;
+    background: #fafafa;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.1);
+    transition: 0.7s;
 }
 
 section.pets .container .pet-card-items .pet-card-item:hover .btn-learn-more {
@@ -239,11 +237,133 @@ section.pets .container nav {
 .btn-pagination.inactive {
     color: #cdcdcd;
     border: 2px solid #cdcdcd;
+    pointer-events: none;
 }
 
 .inactive:hover {
     cursor: default;
     background-color: #f6f6f6;
+}
+
+body.open-modal {
+    overflow-y: hidden;
+}
+
+.modal-window-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    z-index: 2;
+    display: none;
+}
+
+.blackout {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(41, 41, 41, 0.6);
+    transition: 1s;
+    cursor: pointer;
+}
+
+
+.modal-window {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    border-radius: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.btn-modal-close {
+    position: absolute;
+    top: -52px;
+    right: -42px;
+    padding: 0;
+    line-height: 0;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #F1CDB3;
+    background-color: transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-modal-close:hover {
+    background: #F1CDB3;
+}
+
+.modal-window-container {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+
+.modal-window-container img {
+    width: 500px;
+    height: 500px;
+    border-radius: 9px;
+}
+
+.modal-window-content {
+    padding: 0 19.5px 0 29px;
+    align-self: flex-start;
+}
+
+.modal-window-content .pet-name {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    padding: 50px 0 10px;
+}
+
+.modal-window-content .pet-description {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    padding: 40px 0;
+}
+
+.modal-window-content .pet-type {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+}
+
+.pet-info {
+    font-family: Georgia, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.pet-info li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    background-image: url(../../assets/icons/dot.svg);
+    background-position: left 0 top 6.5px;
+    background-size: 4px 4px;
+    background-repeat: no-repeat;
 }
 
 /*========== FOOTER CONTENT ==========*/
@@ -347,6 +467,34 @@ footer .container .footer-img img{
         display: none;
     }
 
+    .modal-window-container {
+        width: 630px;
+    }
+
+    .modal-window-container img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .modal-window-content {
+        padding: 0 8px 0 11px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        font-size: 13px;
+        line-height: 14px;
+        padding: 20px 0;
+    }
+
+    .pet-info li {
+        margin-bottom: 5px;
+    }
+
+
     footer {
         background: radial-gradient(70.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
     }
@@ -371,6 +519,50 @@ footer .container .footer-img img{
         padding: 30px 10px;
     }
 
+    header nav {
+        position: fixed;
+        flex-direction: column;
+        height: 100%;
+        top: 0;
+        right: -320px;
+        transition: 1.2s;
+    }
+
+    header.open-menu {
+        position: relative;
+    }
+
+    body.open-menu {
+        overflow-y: hidden;
+    }
+
+    header nav.open-menu {
+        width: 320px;
+        right: 0px;
+        transition: 1.2s;
+        z-index: 2;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+        background-color: #FFFFFF;
+        width: 320px;
+        height: 100%;
+        padding: 248px 0 0 0;
+        gap: 41px;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        font-size: 32px;
+        line-height: 51px;
+    }
+
+    header nav .nav-link {
+        padding-bottom: 6px;
+    }
+
     .burger {
         display: flex;
         flex-direction: column;
@@ -380,6 +572,12 @@ footer .container .footer-img img{
         cursor: pointer;
         margin-right: 43px;
         margin-top: 19px;
+        z-index: 2;
+    }
+
+    .burger.open-menu {
+        transform: rotate(90deg);
+        transition: 1.2s;
     }
     
     .burger .line {
@@ -389,9 +587,34 @@ footer .container .footer-img img{
         display: block;
     }
 
-    header nav {
-        display: none;
+    .burger-logo {
+        display: block;
+        padding-top: 30px;
+        padding-left: 10px;
+        position: absolute;
+        left: 0;
     }
+
+    header .logo {
+        transition: 1s;
+    }
+
+    header .logo.open-menu{
+        opacity: 0;
+        transition: 1s;
+    }
+
+    div.layer-open-menu {
+        position: absolute;
+        background: rgb(41, 41, 41);
+        opacity: 0.6;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
 
     section.pets .container {
         padding: 42px 0;
@@ -438,6 +661,45 @@ footer .container .footer-img img{
     section.pets .container nav {
         gap: 10px;
     }
+
+    .modal-window-container {
+        width: 240px;
+        padding-bottom: 10px;
+    }
+
+    .modal-window-container img {
+        display: none;
+    }
+
+    .btn-modal-close {
+        right: -30px;
+    }
+
+    .modal-window-content .pet-name {
+        text-align: center;
+    }
+    
+    .modal-window-content .pet-type {
+        text-align: center;
+    }
+
+    .modal-window-content {
+        padding: 0 10px 0 10px;
+    }
+    
+    .modal-window-content .pet-name {
+        padding: 10px 0;
+    }
+    
+    .modal-window-content .pet-description {
+        text-align: justify;
+        padding-bottom: 24px;
+    }
+
+    .pet-info ul li {
+        margin-bottom: 5px;
+    }
+
     
     footer {
         background: radial-gradient(100.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
