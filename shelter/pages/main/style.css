@@ -343,6 +343,54 @@ body.open-modal {
     display: none;
 }
 
+.next-effect {
+    -webkit-animation: next-effect 0.5s ease-in;
+            animation: next-effect 0.5s ease-in;
+}
+  
+.previous-effect {
+    -webkit-animation: previous-effect 0.5s ease-in;
+            animation: previous-effect 0.5s ease-in;
+}
+
+@-webkit-keyframes next-effect {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+  
+@keyframes next-effect {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(150%);
+    }
+}
+@-webkit-keyframes previous-effect {
+    0% {
+        transform: translateX(-150%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes previous-effect {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}
+
 .blackout {
     width: 100%;
     height: 100%;

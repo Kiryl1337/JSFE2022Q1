@@ -237,6 +237,7 @@ section.pets .container nav {
 .btn-pagination.inactive {
     color: #cdcdcd;
     border: 2px solid #cdcdcd;
+    pointer-events: none;
 }
 
 .inactive:hover {

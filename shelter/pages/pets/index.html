@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="normalize.css" />
         <title>Our pets</title>
     </head>
 <body>
@@ -44,7 +43,7 @@
               Our friends who<br />
               are looking for a house
             </h2>
-            <div class="pet-card-items">
+            <div class="pet-card-items ">
                 <div class="pet-card-item">
                     <div class="pet-img">
                         <img src="../../assets/images/katrine.png" alt="Katrine img" />
@@ -103,19 +102,19 @@
                 </div>
             </div>
             <nav>
-                <button class="btn-pagination inactive" disabled>
+                <button class="btn-pagination double-left inactive">
                     <<
                 </button>
-                <button class="btn-pagination inactive" disabled>
+                <button class="btn-pagination single-left inactive" >
                     <
                 </button>
-                <button class="btn-pagination">
+                <button class="btn-pagination number">
                     1
                 </button>
-                <button class="btn-pagination">
+                <button class="btn-pagination single-right">
                     >
                 </button>
-                <button class="btn-pagination">
+                <button class="btn-pagination double-right">
                     >>
                 </button>
             </nav>
@@ -194,4 +193,5 @@
       </footer>
 </body>
 <script type="module" src="../script.js"></script>
+<script type="module" src="./pets.js"></script>
 </html>
