@@ -3,7 +3,8 @@ import petsArr from './main/petsArr.js';
 // BURGER MENU
 
 const divLayer = document.createElement('div')
-document.body.append(divLayer)
+
+document.querySelector('header nav').append(divLayer)
 
 function openMenu(){
     document.querySelector('.burger').classList.toggle('open-menu')
@@ -28,11 +29,12 @@ const divBlackout = document.createElement('div')
 document.body.append(divBlackout)
 
 
-function openModal(event) {
+export default  function openModal(event) {
+
   document.querySelector('body').classList.toggle('open-modal')
   document.querySelector('.modal-window-wrapper').style.display = 'block';
   divBlackout.classList.add('blackout');
-  const petName = event.currentTarget.querySelector('section.pets .container .pet-card-items .pet-card-item h3').innerHTML;
+  const petName = event.currentTarget.querySelector(' .pet-card-item h3').innerHTML;
   const petInfo = petsArr.find((_, i, arr) => {
     if (arr[i]["name"] === petName) {
       return arr[i];

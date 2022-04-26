@@ -202,7 +202,6 @@ section.pets .container{
     align-content: center;
     display: flex;
     flex-flow: column wrap;
-    gap: 60px;
     justify-content: center;
     align-items: center;
     padding: 80px 40px 100px 40px;
@@ -233,6 +232,7 @@ section.pets .container .pets-slider .pet-card-items {
     flex-flow: row;
     gap: 90px;
     width: 100%;
+    padding: 60px 0;
 }
   
 section.pets .container .pets-slider .pet-card-items .pet-card-item {
@@ -763,7 +763,7 @@ footer .container .footer-img img{
         display: flex;
         justify-content: center;
         column-gap: 40px;
-        padding: 0 12px;
+        padding: 60px 12px;
     }
 
     .carousel-wrapper {
@@ -959,13 +959,13 @@ footer .container .footer-img img{
     }
 
     div.layer-open-menu {
-        position: absolute;
-        background: rgb(41, 41, 41);
-        opacity: 0.6;
+        position: fixed;
+        z-index: -1;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        background-color: rgba(41, 41, 41, 0.6);
     }
 
     section.start-screen-content {
@@ -1054,6 +1054,10 @@ footer .container .footer-img img{
         width: 300px;
     }
 
+    section.pets .container .pets-slider .pet-card-items {
+        padding: 0;
+    }
+
     section.pets .container .pets-slider .btn-arrow:nth-child(1){
         order: 1;
     }
@@ -1083,8 +1087,6 @@ footer .container .footer-img img{
         animation-duration: 1s;
     }
     
-
-      
     @keyframes right-effect{
         from {
           left: -270px;

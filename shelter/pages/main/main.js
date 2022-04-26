@@ -1,9 +1,12 @@
 import petsArr from './petsArr.js';
+import openModal from '../script.js';
+
 
 // SLIDER
 
 const LEFT_ITEMS = document.querySelector('.pet-card-items.left');
 const RIGHT_ITEMS = document.querySelector('.pet-card-items.right');
+const CAROUSEL = document.querySelector('.carousel-wrapper');
 
 window.load = slider();
 
@@ -70,8 +73,6 @@ function slider(item){
 
 }
 
-const CAROUSEL = document.querySelector('.carousel-wrapper');
-
 CAROUSEL.addEventListener('animationend', (animationEvent) => {
   if (animationEvent.animationName === "left-effect") {
     CAROUSEL.classList.remove("transition-left-effect");
@@ -83,5 +84,9 @@ CAROUSEL.addEventListener('animationend', (animationEvent) => {
   }
   document.querySelector('.btn-arrow:nth-child(1)').addEventListener("click", moveLeft);
   document.querySelector('.btn-arrow:last-child').addEventListener("click", moveRight);
+
+  document.querySelectorAll('.pet-card-item').forEach((el) => { 
+    el.addEventListener('click', openModal) 
+}); 
 
 });
