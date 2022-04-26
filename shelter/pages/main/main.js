@@ -1,16 +1,35 @@
-import petsArr from './pets.js';
+import petsArr from './petsArr.js';
+
 // SLIDER
 
-window.load = slider();
-document.querySelector('.btn-arrow:nth-child(1)').addEventListener('click', previousEffect);
-document.querySelector('.btn-arrow:last-child').addEventListener('click', nextEffect);
+const LEFT_ITEMS = document.querySelector('.pet-card-items.left');
+const RIGHT_ITEMS = document.querySelector('.pet-card-items.right');
 
-function slider(){
+window.load = slider();
+
+function moveLeft() {
+  slider(LEFT_ITEMS);
+  CAROUSEL.classList.add('transition-left-effect');
+  document.querySelector('.btn-arrow:nth-child(1)').removeEventListener('click', moveLeft);
+  document.querySelector('.btn-arrow:last-child').removeEventListener('click', moveRight);
+}
+
+function moveRight() {
+  slider(RIGHT_ITEMS);
+  CAROUSEL.classList.add('transition-right-effect');
+  document.querySelector('.btn-arrow:nth-child(1)').removeEventListener('click', moveLeft);
+  document.querySelector('.btn-arrow:last-child').removeEventListener('click', moveRight);
+};
+
+document.querySelector('.btn-arrow:nth-child(1)').addEventListener('click', moveLeft);
+document.querySelector('.btn-arrow:last-child').addEventListener('click', moveRight);
+
+function slider(item){
 
   let itemsCount = window.innerWidth >= 1280 ? 3 : (window.innerWidth < 1280 && window.innerWidth >= 768) ? 2 : 1;
   let petsOnPage = [];
   for (let i = 0; i < itemsCount; i++) {
-    let elem = document.querySelectorAll('.pet-card-item h3')[i]
+    let elem = document.querySelector('.pet-card-items.center').querySelectorAll('.pet-card-item h3')[i]
     petsOnPage.push(elem.innerHTML);
   }
 
@@ -28,23 +47,41 @@ function slider(){
       randomPets.push(randomPet);
     }
   }
-
-  for (let i = 0; i < 3; i++) {
-    let currentItem = document.querySelectorAll('.pet-card-item')[i];
-    currentItem.querySelector('.pet-img img').src = randomPets[i]['img'].toString();
-    currentItem.querySelector('h3').textContent = randomPets[i]['name'].toString();
+ 
+  if(item === RIGHT_ITEMS) {
+    for (let i = 0; i < 3; i++) {
+      let currentItem = document.querySelector('.pet-card-items.right').querySelectorAll('.pet-card-item')[i];
+      currentItem.querySelector('.pet-img img').src = randomPets[i]['img'].toString();
+      currentItem.querySelector('h3').textContent = randomPets[i]['name'].toString();
+    }
+  } else if(item === LEFT_ITEMS){
+    for (let i = 0; i < 3; i++) {
+      let currentItem = document.querySelector('.pet-card-items.left').querySelectorAll('.pet-card-item')[i];
+      currentItem.querySelector('.pet-img img').src = randomPets[i]['img'].toString();
+      currentItem.querySelector('h3').textContent = randomPets[i]['name'].toString();
+    }
+  } else {
+    for (let i = 0; i < 3; i++) {
+      let currentItem = document.querySelector('.pet-card-items.center').querySelectorAll('.pet-card-item')[i];
+      currentItem.querySelector('.pet-img img').src = randomPets[i]['img'].toString();
+      currentItem.querySelector('h3').textContent = randomPets[i]['name'].toString();
+    }
   }
-  
+
 }
 
-function previousEffect(){
-  slider()
-  document.querySelector('.pet-card-items').classList.toggle('previous-effect');
-  setTimeout(() => document.querySelector('.pet-card-items').classList.toggle('previous-effect'), 500)
-}
+const CAROUSEL = document.querySelector('.carousel-wrapper');
 
-function nextEffect(){
-  slider()
-  document.querySelector('.pet-card-items').classList.toggle('next-effect');
-  setTimeout(() => document.querySelector('.pet-card-items').classList.toggle('next-effect'), 500)
-} 
+CAROUSEL.addEventListener('animationend', (animationEvent) => {
+  if (animationEvent.animationName === "left-effect") {
+    CAROUSEL.classList.remove("transition-left-effect");
+    document.querySelector(".pet-card-items.center").innerHTML = LEFT_ITEMS.innerHTML;
+
+  } else if (animationEvent.animationName === "right-effect") {
+    CAROUSEL.classList.remove("transition-right-effect");
+    document.querySelector(".pet-card-items.center").innerHTML = RIGHT_ITEMS.innerHTML;
+  }
+  document.querySelector('.btn-arrow:nth-child(1)').addEventListener("click", moveLeft);
+  document.querySelector('.btn-arrow:last-child').addEventListener("click", moveRight);
+
+});

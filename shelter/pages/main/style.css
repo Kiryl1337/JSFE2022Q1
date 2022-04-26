@@ -6,6 +6,10 @@
 
 /*========== HEADER ==========*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 .start-screen {
     max-width: 100%;
     background: radial-gradient(60% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
@@ -226,7 +230,7 @@ section.pets .container .pets-slider {
 section.pets .container .pets-slider .pet-card-items {
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: row;
     gap: 90px;
     width: 100%;
 }
@@ -343,53 +347,47 @@ body.open-modal {
     display: none;
 }
 
-.next-effect {
-    -webkit-animation: next-effect 0.5s ease-in;
-            animation: next-effect 0.5s ease-in;
+.carousel {
+    width: 990px;
+    overflow: hidden;
 }
+
+.carousel-wrapper {
+    position: relative;
+    left: -990px;
+    display: flex;
+}
+
+.transition-right-effect {
+    animation-name: right-effect;
+    animation-duration: 1s;
+}
+
+  @keyframes right-effect{
+    from {
+      left: -990px;
+    }
   
-.previous-effect {
-    -webkit-animation: previous-effect 0.5s ease-in;
-            animation: previous-effect 0.5s ease-in;
-}
-
-@-webkit-keyframes next-effect {
-    0% {
-        transform: translateX(150%);
+    to {
+      left: -1980px;
     }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
+  }
   
-@keyframes next-effect {
-    0% {
-        transform: translateX(0%);
-    }
+  .transition-left-effect {
+    animation-name: left-effect;
+    animation-duration: 1s;
+  }
 
-    100% {
-        transform: translateX(150%);
+  
+  @keyframes left-effect {
+    from {
+      left: -990px;
     }
-}
-@-webkit-keyframes previous-effect {
-    0% {
-        transform: translateX(-150%);
+  
+    to {
+      left: 0px;
     }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-@keyframes previous-effect {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-150%);
-    }
-}
+  }
 
 .blackout {
     width: 100%;
@@ -758,7 +756,7 @@ footer .container .footer-img img{
     }
 
     section.pets .container .pets-slider {
-        width: auto;
+        width: 708px;
     }
 
     section.pets .container .pets-slider .pet-card-items {
@@ -766,6 +764,44 @@ footer .container .footer-img img{
         justify-content: center;
         column-gap: 40px;
         padding: 0 12px;
+    }
+
+    .carousel-wrapper {
+        left: -580px;
+    }
+    
+    .carousel {
+        width: 580px;
+    }
+
+    .transition-right-effect {
+        animation-name: right-effect;
+        animation-duration: 1s;
+    } 
+      
+    @keyframes right-effect{
+        from {
+          left: -580px;
+        }
+      
+        to {
+          left: -1160px;
+        }
+    }
+      
+    .transition-left-effect {
+        animation-name: left-effect;
+        animation-duration: 1s;
+    }
+         
+    @keyframes left-effect {
+        from {
+          left: -580px;
+        }
+      
+        to {
+          left: 0px;
+        }
     }
 
     .modal-window-container {
@@ -1015,6 +1051,7 @@ footer .container .footer-img img{
         justify-content: center;
         column-gap: 80px;
         row-gap: 20px;
+        width: 300px;
     }
 
     section.pets .container .pets-slider .btn-arrow:nth-child(1){
@@ -1031,6 +1068,46 @@ footer .container .footer-img img{
 
     section.pets .container .pets-slider .pet-card-items .pet-card-item:nth-child(3) {
         display: none;
+    }
+
+    .carousel-wrapper {
+        left: -270px;
+    }
+    
+    .carousel {
+        width: 270px;
+    }
+
+    .transition-right-effect {
+        animation-name: right-effect;
+        animation-duration: 1s;
+    }
+    
+
+      
+    @keyframes right-effect{
+        from {
+          left: -270px;
+        }
+      
+        to {
+          left: -540px;
+        }
+    }
+      
+    .transition-left-effect {
+        animation-name: left-effect;
+        animation-duration: 1s;
+    }
+      
+    @keyframes left-effect {
+        from {
+          left: -270px;
+        }
+      
+        to {
+          left: 0px;
+        }
     }
 
     .modal-window-container {

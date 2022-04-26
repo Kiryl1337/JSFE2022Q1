@@ -1,4 +1,4 @@
-import petsArr from './main/pets.js';
+import petsArr from './main/petsArr.js';
 
 // BURGER MENU
 
