@@ -532,6 +532,9 @@ footer .container .footer-img img{
         transition: 1.2s;
     }
 
+    header.open-menu {
+        position: relative;
+    }
 
     body.open-menu {
         overflow-y: hidden;
