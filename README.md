@@ -1,2 +1,1 @@
-# kiryl1337-JSFE2022Q1
-Private repository for @kiryl1337
+Shelter project deploy: https://kiryl1337.github.io/Shelter/shelter/pages/main/index.html
